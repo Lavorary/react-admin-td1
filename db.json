@@ -2,27 +2,111 @@
   "employees": [
     {
       "id": "1",
-      "firstname": "Alice Martin",
+      "firstname": "Alice",
+      "lastname": "Martin",
       "email": "alice@company.com ",
       "department": "Computer science",
-      "salary": "2 800 €",
-      "online": "Oui"
+      "salary": 2800,
+      "online": true
     },
     {
       "id": "2",
-      "firstname": "Bob Dupont",
+      "firstname": "Bob",
+      "lastname": "Dupont",
       "email": "bob@company.com",
       "department": "Marketing",
-      "salary": "2 500 €",
-      "online": "Oui"
+      "salary": 2500,
+      "online": true
     },
     {
       "id": "3",
-      "firstname": "Clara Nguyen",
+      "firstname": "Clara",
+      "lastname": "Nguyen",
       "email": "clara@company.com",
       "department": "RH",
-      "salary": "2 600 €",
-      "online": "Non"
+      "salary": 2600,
+      "online": false
+    },
+    {
+      "id": "4",
+      "firstname": "Penelope",
+      "lastname": "Lodge",
+      "email": "lodge@company.com",
+      "department": "Finance",
+      "salary": 3000,
+      "online": true
+    },
+    {
+      "id": "5",
+      "firstname": "Lilith",
+      "lastname": "Clawthorne",
+      "email": "clawthorne@company.com",
+      "department": "Computer science",
+      "salary": 3200,
+      "online": true
+    }
+  ],
+  "interns": [
+    {
+      "id": "1",
+      "firstname": "Lucas",
+      "lastname": "Moreau",
+      "email": "lucas.moreau@intern.com",
+      "department": "Computer science",
+      "managerId": "1",
+      "isRemunerated": true,
+      "remuneration": 800
+    },
+    {
+      "id": "2",
+      "firstname": "Sophia",
+      "lastname": "Forbs",
+      "email": "sophia.forbs@intern.com",
+      "department": "Marketing",
+      "managerId": "2",
+      "isRemunerated": true,
+      "remuneration": 750
+    },
+    {
+      "id": "3",
+      "firstname": "Thomas",
+      "lastname": "Febrile",
+      "email": "thomas.febrile@intern.com",
+      "department": "Computer science",
+      "managerId": "5",
+      "isRemunerated": false,
+      "remuneration": 0
+    },
+    {
+      "id": "4",
+      "firstname": "Eliot",
+      "lastname": "Garcia",
+      "email": "eliot.garcia@intern.com",
+      "department": "RH",
+      "managerId": "5",
+      "isRemunerated": true,
+      "remuneration": 700
+    },
+    {
+      "id": "5",
+      "firstname": "Nicolas",
+      "lastname": "Martinez",
+      "email": "nicolas.martinez@intern.com",
+      "department": "Finance",
+      "managerId": "4",
+      "isRemunerated": true,
+      "remuneration": 900
+    },
+    {
+      "id": "6",
+      "firstname": "Camilla",
+      "lastname": "Dolores",
+      "email": "camille.dolores@intern.com",
+      "department": "Marketing",
+      "managerId": "2",
+      "isRemunerated": false,
+      "remuneration": 0
     }
   ]
 }
+
