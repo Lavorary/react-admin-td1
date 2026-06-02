@@ -6,6 +6,8 @@ import {
   Pagination,
   SearchInput,
   SelectInput,
+  ReferenceField,
+  TextField
 } from 'react-admin';
 
 const choices = [
@@ -49,7 +51,12 @@ export const InternList = () => (
                 <EmailField source="email" />
             </DataTable.Col>
             <DataTable.Col source="department" />
-            <DataTable.Col source="managerId" />
+             <DataTable.Col source="managerId" label="Manager">
+        <ReferenceField source="managerId" reference="employees" link="show">
+          <TextField source="firstname" />
+          <TextField source="lastname" />
+        </ReferenceField>
+      </DataTable.Col>
             <DataTable.Col source="isRemunerated">
                 <BooleanField source="isRemunerated" />
             </DataTable.Col>
