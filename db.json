@@ -96,16 +96,6 @@
       "managerId": "4",
       "isRemunerated": true,
       "remuneration": 900
-    },
-    {
-      "id": "6",
-      "firstname": "Camilla",
-      "lastname": "Dolores",
-      "email": "camille.dolores@intern.com",
-      "department": "Marketing",
-      "managerId": "2",
-      "isRemunerated": false,
-      "remuneration": 0
     }
   ]
 }
