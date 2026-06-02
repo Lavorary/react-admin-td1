@@ -1,5 +1,5 @@
 import {
-  Create,
+  Edit,
   SimpleForm,
   TextInput,
   SelectInput,
@@ -9,12 +9,10 @@ import {
   AutocompleteInput,
   required,
   email,
-  minValue,
-  FormDataConsumer
+  useRecordContext
 } from 'react-admin';
 
-
-const validateRemuneration = (value, allValues) => {
+const validateRemuneration = (value: number, allValues: { isRemunerated: any; }) => {
   if (allValues.isRemunerated && !value) {
     return 'intern is remunerated, remuneration field is required';
   }
@@ -24,22 +22,27 @@ const validateRemuneration = (value, allValues) => {
   return undefined;
 };
 
-export const InternCreate = () => (
-  <Create>
+const InternTitle = () => {
+  const record = useRecordContext();
+  if (!record) return null;
+  return <span>Modify : {record.firstname} {record.lastname}</span>;
+};
+
+export const InternEdit = () => (
+  <Edit title={<InternTitle />}>
     <SimpleForm>
       <TextInput
-      source="firstname"
-      label="Firstname"
-      validate={required()}
-      fullWidth />
-
-      <TextInput
-        source="lastname"
-        label="Lastname"
+        source="firstname"
+        label="firstname"
         validate={required()}
         fullWidth
       />
-
+      <TextInput
+        source="lastname"
+        label="lastname"
+        validate={required()}
+        fullWidth
+      />
       <TextInput
         source="email"
         label="Email"
@@ -49,7 +52,7 @@ export const InternCreate = () => (
 
       <SelectInput
         source="department"
-        label="Department"
+        label="Departement"
         choices={[
           { id: 'Computer science', name: 'Computer science' },
           { id: 'Marketing', name: 'Marketing' },
@@ -76,25 +79,16 @@ export const InternCreate = () => (
 
       <BooleanInput
         source="isRemunerated"
-        label="Remunerated internship"
-        defaultValue={false}
+        label="Intern remunerated"
       />
 
-      <FormDataConsumer>
-        {({ formData }) => (
-          formData.isRemunerated && (
-            <NumberInput
-              source="remuneration"
-              label="Remuneration"
-              validate={[required(), minValue(500, 'minimal value of remuneration is 500$')]}
-              step={100}
-              fullWidth
-            />
-          )
-        )}
-      </FormDataConsumer>
-
-
+      <NumberInput
+        source="remuneration"
+        label="Remunération"
+        validate={validateRemuneration}
+        step={50}
+        fullWidth
+      />
     </SimpleForm>
-  </Create>
+  </Edit>
 );
