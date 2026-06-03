@@ -7,6 +7,7 @@ import { EmployeeShow } from "./employees/EmployeeShow.tsx";
 import { InternList } from "./interns/InternList";
 import { InternCreate } from "./interns/InternCreate.tsx";
 import { InternEdit } from "./interns/InternEdit.tsx";
+import { InternShow } from "./interns/InternShow.tsx";
 
 const dataProvider = jsonServerProvider("http://localhost:3002");
 
@@ -25,6 +26,7 @@ export const App = () => (
     list={InternList}
     create={InternCreate}
     edit={InternEdit}
+    show={InternShow}
     />
 
   </Admin>
