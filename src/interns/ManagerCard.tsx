@@ -1,4 +1,4 @@
-import { useRecordContext, useGetOne, TextField, SimpleShowLayout, EmailField } from 'react-admin';
+import { useRecordContext, useGetOne } from 'react-admin';
 
 
 export const ManagerCard = () => {
@@ -14,12 +14,13 @@ export const ManagerCard = () => {
   if(!manager) return <span>manager not found</span>;
 
   return(
-    <SimpleShowLayout>
-      <span>Manager resume</span>
-      <TextField source="firstname" label="Firstname" record={manager} />
-      <TextField source="lastname" label="Lastname" record={manager} />
-      <TextField source="department" label="Department" record={manager} />
-      <EmailField source="email" label="Email" record={manager}>{manager.email}</EmailField>
-    </SimpleShowLayout>
+    <div style={{ marginTop: '20px', borderTop: '1px solid #ccc', paddingTop: '10px' }}>
+      <h3>Manager</h3>
+      <p><b>Firstname</b> : {manager.firstname}</p>
+      <p><b>Lastname</b> : {manager.lastname}</p>
+      <p><b>Department</b> : {manager.department}</p>
+      <p><b>Email</b> : {manager.email}</p>
+      <p><b>Status</b> : {manager.online === true ? 'online' : 'notOnline'}</p>
+    </div>
   );
 };
