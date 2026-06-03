@@ -71,7 +71,7 @@ export const InternCreate = () => (
         <AutocompleteInput
           optionText="firstname"
           validate={required()}
-          label="Manager (actif)"
+          label="Manager (online)"
         />
       </ReferenceInput>
 

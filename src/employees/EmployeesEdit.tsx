@@ -65,7 +65,7 @@ export const EmployeeEdit = () => (
         step={100}
         fullWidth
       />
-      <BooleanInput source="active" label="Actif" />
+      <BooleanInput source="online" label="online" />
     </SimpleForm>
   </Edit>
 );

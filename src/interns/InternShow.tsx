@@ -8,10 +8,10 @@ import {
   ListButton,
   EditButton,
   useRecordContext,
-  ReferenceField,
   useGetOne,
   Link,
 } from "react-admin";
+import { ManagerCard } from "./ManagerCard";
 
 const InternActions = () => (
   <TopToolbar>
@@ -28,7 +28,7 @@ const ManagerDetail = () => {
   id: record.managerId
 });
   if(isLoading) return <span>loading...</span>
-  if(error) return <span>oh no, we failed loading manager</span>
+  if(error) return <span>something went wrong</span>
   if(!manager) return <span>no manager found</span>
 
   return (
@@ -54,6 +54,7 @@ export const InternShow = () => (
       </div>
       <BooleanField source="isRemunerated" label="Is remunerated" />
       <NumberField source="remuneration" label="Remuneration" options={{ style: "currency", currency: "EUR" }} />
+      <ManagerCard />
     </SimpleShowLayout>
   </Show>
 );

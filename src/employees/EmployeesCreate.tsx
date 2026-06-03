@@ -54,9 +54,9 @@ export const EmployeeCreate = () => (
         fullWidth
       />
       <BooleanInput
-        source="active"
-        label="Active"
-        defaultValue={"Oui"}
+        source="online"
+        label="online"
+        defaultValue={false}
       />
     </SimpleForm>
   </Create>

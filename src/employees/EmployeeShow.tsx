@@ -29,7 +29,7 @@ export const EmployeeShow = () => (
         label="salary"
         options={{ style: "currency", currency: "EUR" }}
       />
-      <BooleanField source="active" label="active" />
+      <BooleanField source="online" label="online" />
     </SimpleShowLayout>
   </Show>
 );
