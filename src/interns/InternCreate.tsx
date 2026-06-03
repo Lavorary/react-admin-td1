@@ -14,6 +14,7 @@ import {
 } from 'react-admin';
 
 
+
 const validateRemuneration = (value: number, allValues: { isRemunerated: any; }) => {
   if (allValues.isRemunerated && !value) {
     return 'intern is remunerated, remuneration field is required';
@@ -86,7 +87,7 @@ export const InternCreate = () => (
             <NumberInput
               source="remuneration"
               label="Remuneration"
-              validate={[required(), minValue(500, 'minimal value of remuneration is 500$')]}
+              validate={[required(), minValue(500), validateRemuneration]}
               step={100}
               fullWidth
             />
