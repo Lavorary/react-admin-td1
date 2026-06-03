@@ -9,6 +9,7 @@ import {
   ReferenceField,
   TextField
 } from 'react-admin';
+import { QuickInternCreate } from "./QuickInternCreate";
 
 const choices = [
   { id: 'Computer science', name: 'Computer science' },
@@ -62,6 +63,8 @@ export const InternList = () => (
                 <BooleanField source="isRemunerated" />
             </DataTable.Col>
             <DataTable.NumberCol source="remuneration" />
+
         </DataTable>
+    <QuickInternCreate />
   </List>
 )
