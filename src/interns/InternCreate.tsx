@@ -14,7 +14,7 @@ import {
 } from 'react-admin';
 
 
-const validateRemuneration = (value, allValues) => {
+const validateRemuneration = (value: number, allValues: { isRemunerated: any; }) => {
   if (allValues.isRemunerated && !value) {
     return 'intern is remunerated, remuneration field is required';
   }

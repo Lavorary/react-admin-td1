@@ -54,6 +54,7 @@ export const InternList = () => (
              <DataTable.Col source="managerId" label="Manager">
         <ReferenceField source="managerId" reference="employees" link="show">
           <TextField source="firstname" />
+          <label> </label>
           <TextField source="lastname" />
         </ReferenceField>
       </DataTable.Col>

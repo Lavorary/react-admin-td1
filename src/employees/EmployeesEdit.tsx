@@ -18,7 +18,7 @@ const EmployeeTitle = () => {
       Modifier : {record.firstname} {record.lastname}
     </span>
   ) : (
-    <span>Modify the empoyee</span>
+    <span>Modify the employee</span>
   );
 };
 
