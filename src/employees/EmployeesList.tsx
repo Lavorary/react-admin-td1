@@ -6,6 +6,7 @@ import {
   DataTable,
   EmailField,
 } from "react-admin";
+import { QuickStatusToggle } from "./QuickStatusToggle";
 
 const choices = [
   { id: "Computer science", name: "Computer science" },
@@ -40,6 +41,7 @@ export const EmployeeList = () => (
             <DataTable.Col source="online">
                 <BooleanField source="online" />
             </DataTable.Col>
+          <QuickStatusToggle />
         </DataTable>
     </List>
 );
