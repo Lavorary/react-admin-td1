@@ -48,10 +48,9 @@ export const InternShow = () => (
       <TextField source="lastname" label="Lastname"/>
       <TextField source="email" label="Email"/>
       <TextField source="department" label="Department" />
-      <label>Manager</label>
-      <div>
+
+      <TextField source={"managerId"} label="manager" />
         <ManagerDetail />
-      </div>
       <BooleanField source="isRemunerated" label="Is remunerated" />
       <NumberField source="remuneration" label="Remuneration" options={{ style: "currency", currency: "EUR" }} />
       <ManagerCard />
