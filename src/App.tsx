@@ -19,6 +19,7 @@ export const App = () => (
       create={EmployeeCreate}
       edit={EmployeeEdit}
       show={EmployeeShow}
+      options={{ label:"employees" }}
     />
 
     <Resource
@@ -27,6 +28,7 @@ export const App = () => (
     create={InternCreate}
     edit={InternEdit}
     show={InternShow}
+    options={{ label:"interns" }}
     />
 
   </Admin>
